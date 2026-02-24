@@ -1,154 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Md Abdullah Ali — Full Stack Web Developer Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Md Abdullah Ali — Full Stack Web Developer with 4+ years of experience in Data Science, Analytics, SQL, Python, Power BI & Machine Learning. Based in New Delhi, India.">
-    <meta name="keywords" content="Full Stack Developer, Web Developer, Data Analyst, Portfolio, Md Abdullah Ali">
-    <meta name="author" content="Md Abdullah Ali">
 
-    <!-- Fonts -->
+<head>
+    <title>Md Abdullah Ali — Full Stack & Backend Developer Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Md Abdullah Ali — Full Stack & Backend Developer with experience at Quest Innovative Solutions & Tech Nova Solutions. Expert in Node.js, React, Microservices, Docker, AWS, MongoDB. Kochi → Delhi, India.">
+    <meta name="keywords"
+        content="Full Stack Developer, Backend Developer, Node.js, React, Microservices, Docker, AWS, Portfolio, Md Abdullah Ali">
+    <meta name="author" content="Md Abdullah Ali">
+    <meta name="theme-color" content="#00ff41">
+    <meta property="og:title" content="Md Abdullah Ali — Full Stack & Backend Developer">
+    <meta property="og:description"
+        content="Backend & Full Stack Developer building scalable microservices, real-time dashboards & cloud-deployed applications.">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/premium-portfolio.css">
+    <link rel="stylesheet" href="css/3d-portfolio.css">
 </head>
+
 <body>
-
-    <!-- Cursor Glow Effect -->
+    <div class="scanlines"></div>
+    <canvas id="matrix-canvas"></canvas>
+    <canvas id="neural-canvas"></canvas>
     <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-    <!-- Particle Background -->
-    <canvas id="particleCanvas"></canvas>
-
-    <!-- Navbar -->
+    <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>MA<span class="logo-bracket">/&gt;</span>
+                <span class="logo-bracket">[</span>MA<span class="logo-bracket">]</span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-                <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
-                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active" data-section="home"> &gt; home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about"> &gt; about</a></li>
+                <li><a href="#resume" class="nav-link" data-section="resume"> &gt; resume</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">&gt; projects</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">&gt; services</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact"> &gt; contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- ==================== HERO ==================== -->
     <section id="home" class="hero-section">
+        <div class="hero-grid-overlay"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    <span>Available for opportunities</span>
+                    &nbsp;SYSTEM: ONLINE &mdash; Open to Opportunities
                 </div>
                 <h1 class="hero-title">
-                    <span class="hero-greeting">Hello, I'm</span>
-                    <span class="hero-name">Md. Abdullah Ali</span>
+                    <span class="hero-greeting">// Hello, World! 👋</span>
+                    <span class="glitch-name" data-text="Md. Abdullah Ali">Md. Abdullah Ali</span>
                 </h1>
                 <div class="hero-role-wrapper">
-                    <span class="hero-role-prefix">I'm a</span>
+                    <span class="hero-role-prefix">$ role =&nbsp;</span>
                     <span class="hero-role" id="heroRole"></span>
-                    <span class="typing-cursor">|</span>
+                    <span class="typing-cursor">█</span>
                 </div>
-                <h2 class="hero-subtitle">Full Stack Web Developer</h2>
-                <p class="hero-description">Crafting digital experiences with code & creativity. Transforming ideas into powerful, scalable web solutions.</p>
+                <h2 class="hero-subtitle">// Backend Developer &bull; Full Stack Engineer &bull; Cloud Specialist</h2>
+                <p class="hero-description">
+                    Building high-performance backend systems, scalable microservices &amp; real-time applications.<br>
+                    Containerized &amp; cloud-deployed with Docker, Kubernetes &amp; AWS.
+                </p>
                 <div class="hero-cta">
-                    <a href="https://www.youtube.com/@RhraOfficial" class="btn btn-primary" target="_blank">
-                        <i class="fab fa-youtube"></i> YouTube
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>&nbsp;View Projects
                     </a>
-                    <a href="https://github.com/md-abdullahali" class="btn btn-outline" target="_blank">
-                        <i class="fab fa-github"></i> My Works
+                    <a href="https://github.com/md-abdullahali" class="btn btn-secondary" target="_blank"
+                        rel="noopener">
+                        <i class="fab fa-github"></i>&nbsp;GitHub
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
-                        <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Years Exp.</span>
+                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Yrs Exp.</span>
                     </div>
                     <div class="hero-stat-divider"></div>
                     <div class="hero-stat">
-                        <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
+                        <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
                         <span class="stat-label">Projects</span>
                     </div>
                     <div class="hero-stat-divider"></div>
                     <div class="hero-stat">
-                        <span class="stat-number" data-target="1000">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Students</span>
+                        <span class="stat-number" data-target="2">0</span><span class="stat-plus"></span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number" data-target="40">0</span><span class="stat-plus">%</span>
+                        <span class="stat-label">Perf. Gains</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-image-wrapper">
-                    <div class="hero-image-glow"></div>
-                    <img src="images/bg_1.png" alt="Md Abdullah Ali" loading="eager">
-                    <div class="hero-image-ring"></div>
-                    <div class="hero-image-ring hero-image-ring-2"></div>
+
+            <!-- RIGHT: Terminal -->
+            <div class="hero-terminal-wrap">
+                <div class="t-badge">portfolio_v5.0.exe</div>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="t-dot r"></div>
+                        <div class="t-dot y"></div>
+                        <div class="t-dot g"></div>
+                        <span class="t-title">zsh &mdash; md-abdullah@dev: ~/portfolio</span>
+                    </div>
+                    <div class="terminal-body" id="hacker-terminal"></div>
                 </div>
-                <div class="floating-card card-1">
-                    <i class="fab fa-react"></i>
-                    <span>React.js</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-database"></i>
-                    <span>SQL</span>
+                <div class="tech-pills">
+                    <span class="tech-pill pill-js">Node.js</span>
+                    <span class="tech-pill pill-react">React</span>
+                    <span class="tech-pill pill-py">Python</span>
+                    <span class="tech-pill pill-sql">MongoDB</span>
+                    <span class="tech-pill pill-node">Docker</span>
+                    <span class="tech-pill pill-git">AWS</span>
                 </div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll Down</span>
+            <span>Scroll</span>
             <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- ==================== ABOUT SECTION ==================== -->
+    <!-- ==================== ABOUT ==================== -->
     <section id="about" class="about-section section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">&lt;about&gt;</span>
+                <span class="section-tag">// about.md</span>
                 <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-                <p class="section-subtitle">Get to know me better</p>
+                <p class="section-subtitle">Backend-first engineer who loves building systems that scale</p>
             </div>
-
             <div class="about-grid">
                 <div class="about-image-col" data-animate="fade-right">
                     <div class="about-image-card">
-                        <img src="images/about-me.png" alt="Md Abdullah Ali" class="about-photo">
+                        <img src="images/about-me.png" alt="Md Abdullah Ali — Backend & Full Stack Developer"
+                            class="about-photo">
                         <div class="about-image-overlay"></div>
                         <div class="about-info-badge">
                             <div class="info-item">
-                                <span class="info-label">Name</span>
+                                <span class="info-label">const name</span>
                                 <span class="info-value">Md Abdullah Ali</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">Role</span>
-                                <span class="info-value">Full Stack Web Developer</span>
+                                <span class="info-label">let role</span>
+                                <span class="info-value">Backend / Full Stack</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">Experience</span>
-                                <span class="info-value highlight">4 Years</span>
+                                <span class="info-label">var exp</span>
+                                <span class="info-value highlight">3+ Years</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">Location</span>
-                                <span class="info-value">New Delhi, India</span>
+                                <span class="info-label">import from</span>
+                                <span class="info-value">India 🇮🇳</span>
                             </div>
                         </div>
                     </div>
@@ -156,99 +171,104 @@
 
                 <div class="about-content-col" data-animate="fade-left">
                     <div class="about-text">
-                        <p class="about-description">With over 5 years of comprehensive experience in the field of data science & analytics, accompanied by a bachelor's degree in engineering. 
-                            Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
-                            Demonstrated success in leading impactful projects and providing effective mentorship.</p>
-                        
+                        <p class="about-description">
+                            A passionate <strong class="green-text">Backend Developer & Full Stack Engineer</strong>
+                            with 3+ years of professional experience
+                            building scalable microservices, RESTful APIs, and cloud-deployed applications. Proficient
+                            in
+                            <strong class="cyan-text">Node.js, React, Docker, Kubernetes, and AWS</strong>. Experienced
+                            at
+                            Quest Innovative Solutions (Kochi) &amp; Tech Nova Solutions (Bangalore), delivering
+                            high-performance systems with measurable impact — 40% faster DB queries, 30% better fault
+                            tolerance,
+                            and 100% automated CI/CD pipelines.
+                        </p>
                         <div class="about-details-grid">
                             <div class="detail-item">
-                                <span class="detail-label">Profile</span>
-                                <span class="detail-value">Data Science &amp; Analytics</span>
+                                <span class="detail-label">// education</span>
+                                <span class="detail-value">B.Sc Computer Science</span>
                             </div>
                             <div class="detail-item">
-                                <span class="detail-label">Domain</span>
-                                <span class="detail-value">Retail, Ecommerce, BFSI &amp; Digital Marketing</span>
+                                <span class="detail-label">// university</span>
+                                <span class="detail-value">Sandip University, Nashik</span>
                             </div>
                             <div class="detail-item">
-                                <span class="detail-label">Education</span>
-                                <span class="detail-value">Bachelor of Engineering</span>
+                                <span class="detail-label">// backend</span>
+                                <span class="detail-value">Node.js, Express, NestJS</span>
                             </div>
                             <div class="detail-item">
-                                <span class="detail-label">Language</span>
-                                <span class="detail-value">English, Hindi</span>
+                                <span class="detail-label">// frontend</span>
+                                <span class="detail-value">React.js, Next.js, HTML/CSS</span>
                             </div>
                             <div class="detail-item">
-                                <span class="detail-label">BI Tools</span>
-                                <span class="detail-value">Microsoft Power BI, Looker &amp; Tableau</span>
+                                <span class="detail-label">// databases</span>
+                                <span class="detail-value">MongoDB, MySQL, Redis, Firebase</span>
                             </div>
                             <div class="detail-item">
-                                <span class="detail-label">Other Skills</span>
-                                <span class="detail-value">Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Interest</span>
-                                <span class="detail-value">Traveling, Travel Photography, Teaching</span>
+                                <span class="detail-label">// devops</span>
+                                <span class="detail-value">Docker, AWS, GitHub Actions</span>
                             </div>
                         </div>
-
                         <div class="about-cta">
                             <div class="projects-count">
-                                <span class="count-number" data-target="30">0</span><span class="count-plus">+</span>
-                                <span class="count-label">Projects completed</span>
+                                <span class="count-number" data-target="15">0</span><span class="count-plus">+</span>
+                                <span class="count-label">Projects built</span>
                             </div>
-                            <a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-linkedin"></i> LinkedIn
+                            <a href="https://www.linkedin.com/in/mdabdullahali/" class="btn btn-primary" target="_blank"
+                                rel="noopener">
+                                <i class="fab fa-linkedin"></i>&nbsp;LinkedIn
+                            </a>
+                            <a href="https://github.com/md-abdullahali" class="btn btn-secondary" target="_blank"
+                                rel="noopener">
+                                <i class="fab fa-github"></i>&nbsp;GitHub
                             </a>
                         </div>
                     </div>
 
-                    <!-- Skills Section -->
+                    <!-- Skills from CV -->
                     <div class="skills-container">
-                        <h3 class="skills-title">Technical Skills</h3>
+                        <h3 class="skills-title">$ cat skills.json</h3>
                         <div class="skills-grid">
                             <div class="skill-item">
-                                <div class="skill-header">
-                                    <span class="skill-name">SQL</span>
-                                    <span class="skill-percent">95%</span>
-                                </div>
+                                <div class="skill-header"><span class="skill-name">JavaScript / TypeScript</span><span
+                                        class="skill-percent">92%</span></div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="95"></div>
+                                    <div class="skill-progress" data-width="92"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-header">
-                                    <span class="skill-name">Python</span>
-                                    <span class="skill-percent">30%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="30"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span class="skill-name">Data Visualization</span>
-                                    <span class="skill-percent">90%</span>
-                                </div>
+                                <div class="skill-header"><span class="skill-name">Node.js / Express /
+                                        NestJS</span><span class="skill-percent">90%</span></div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-header">
-                                    <span class="skill-name">Statistical Analysis</span>
-                                    <span class="skill-percent">85%</span>
-                                </div>
+                                <div class="skill-header"><span class="skill-name">React.js / Next.js</span><span
+                                        class="skill-percent">85%</span></div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-header">
-                                    <span class="skill-name">Machine Learning</span>
-                                    <span class="skill-percent">20%</span>
-                                </div>
+                                <div class="skill-header"><span class="skill-name">MongoDB / MySQL / Redis</span><span
+                                        class="skill-percent">88%</span></div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="20"></div>
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header"><span class="skill-name">Docker / Kubernetes / AWS</span><span
+                                        class="skill-percent">80%</span></div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header"><span class="skill-name">Python / C++ / Go
+                                        (Learning)</span><span class="skill-percent">70%</span></div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
                                 </div>
                             </div>
                         </div>
@@ -258,293 +278,516 @@
         </div>
     </section>
 
-    <!-- ==================== RESUME SECTION ==================== -->
+    <!-- ==================== RESUME ==================== -->
     <section id="resume" class="resume-section section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">&lt;resume&gt;</span>
+                <span class="section-tag">// resume.json</span>
                 <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
-                <p class="section-subtitle">Seasoned Senior Data Analyst with 4+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+                <p class="section-subtitle">Backend Developer &amp; Full Stack Engineer — building production-grade
+                    systems with microservices, cloud &amp; real-time technologies.</p>
             </div>
 
-            <!-- Experience -->
-            <div class="resume-block" data-animate="fade-up">
-                <div class="resume-block-header">
-                    <div class="resume-icon"><i class="fas fa-briefcase"></i></div>
-                    <h3>Experience</h3>
+            <div class="resume-two-col">
+                <!-- Experience -->
+                <div class="resume-block" data-animate="fade-right">
+                    <div class="resume-block-header">
+                        <div class="resume-icon"><i class="fas fa-code"></i></div>
+                        <h3>_experience[]</h3>
+                    </div>
+                    <div class="timeline">
+
+                        <!-- Job 1: Quest Innovative Solutions -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <span class="timeline-date">Jan 2024 &rarr; Dec 2025</span>
+                                <h4 class="timeline-title">Backend Developer / Software Engineer</h4>
+                                <span class="timeline-company"><i class="fas fa-terminal"></i>Quest Innovative Solutions
+                                    Pvt. Ltd. — Kochi, Kerala</span>
+                                <ul class="timeline-list">
+                                    <li>Designed Microservices using <strong class="cyan-text">Spring
+                                            Boot/Python</strong> to decouple order processing from inventory management
+                                        — improved fault tolerance by <strong class="green-text">30%</strong>.</li>
+                                    <li>Integrated <strong class="cyan-text">Apache Kafka</strong> for async
+                                        event-driven communication between payment gateway &amp; shipping module,
+                                        reducing API latency.</li>
+                                    <li>Implemented <strong class="cyan-text">Redis Caching</strong> for frequently
+                                        accessed product metadata — <strong class="green-text">40% faster</strong>
+                                        search speeds.</li>
+                                    <li>Built Real-time Dashboard using <strong class="cyan-text">WebSockets</strong>
+                                        for live shipment tracking updates.</li>
+                                    <li>Containerized full app suite via <strong class="cyan-text">Docker +
+                                            Kubernetes</strong> for auto-scaling during peak seasons.</li>
+                                    <li>Implemented <strong class="cyan-text">RBAC with OAuth2 &amp; JWT</strong> to
+                                        secure sensitive warehouse data.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Job 2: Tech Nova Solutions -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <span class="timeline-date">Aug 2022 &rarr; Nov 2023</span>
+                                <h4 class="timeline-title">Full-Stack Developer</h4>
+                                <span class="timeline-company"><i class="fas fa-terminal"></i>Tech Nova Solutions Pvt.
+                                    Ltd. — Bengaluru, Karnataka</span>
+                                <ul class="timeline-list">
+                                    <li>Architected high-performance <strong class="cyan-text">RESTful APIs</strong>
+                                        with Node.js (Express) &amp; PostgreSQL for 100+ concurrent workflows.</li>
+                                    <li>Built Dynamic Workflow Builder in <strong class="cyan-text">React.js</strong> —
+                                        non-technical heads configure approval flows without code changes.</li>
+                                    <li>Implemented <strong class="cyan-text">JWT + RBAC</strong> for enterprise-grade
+                                        data privacy &amp; compliance.</li>
+                                    <li>Reduced report generation time by <strong class="green-text">45%</strong> via
+                                        PostgreSQL query optimization &amp; Database Indexing.</li>
+                                    <li>Integrated <strong class="cyan-text">AWS SNS/SES</strong> for triggered
+                                        notifications — reduced communication gaps by <strong
+                                            class="green-text">70%</strong>.</li>
+                                    <li>Established <strong class="cyan-text">CI/CD pipelines via GitHub
+                                            Actions</strong> — 100% automated deployments to AWS EC2.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <span class="timeline-date">2021 - Present</span>
-                            <h4 class="timeline-title">Senior Data Analyst</h4>
-                            <span class="timeline-company"><i class="fas fa-building"></i> Merkle</span>
-                            <p class="timeline-desc">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.</p>
-                            <ul class="timeline-list">
-                                <li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
-                                <li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
-                                <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
-                            </ul>
+
+                <!-- Education + Tech Skills -->
+                <div class="resume-block" data-animate="fade-left">
+                    <div class="resume-block-header">
+                        <div class="resume-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>_education[]</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <span class="timeline-date">Jun 2018 &rarr; Jul 2022</span>
+                                <h4 class="timeline-title">Bachelor of Science in Computer Science</h4>
+                                <span class="timeline-company"><i class="fas fa-university"></i>Sandip University —
+                                    Nashik, Maharashtra</span>
+                                <p class="timeline-desc"><strong class="green-text">Relevant Coursework:</strong> DSA
+                                    (C++), Operating Systems, DBMS (MySQL), Computer Forensics, OOPs, Probability &amp;
+                                    Statistics (Python), Linear Algebra.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <span class="timeline-date">2018 - 2021</span>
-                            <h4 class="timeline-title">Senior Data Analyst</h4>
-                            <span class="timeline-company"><i class="fas fa-building"></i> iQuanti</span>
-                            <p class="timeline-desc">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands.</p>
-                            <ul class="timeline-list">
-                                <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
-                                <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-                                <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-                            </ul>
+
+                    <!-- Tech Skills from CV -->
+                    <div class="resume-block-header" style="margin-top:36px;">
+                        <div class="resume-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>_tech_stack[]</h3>
+                    </div>
+                    <div class="tech-stack-grid">
+                        <div class="ts-item glass-card">
+                            <span class="ts-label">// languages</span>
+                            <span class="ts-value">JavaScript (ES6+), TypeScript, C++, Python, Go (Learning)</span>
+                        </div>
+                        <div class="ts-item glass-card">
+                            <span class="ts-label">// backend</span>
+                            <span class="ts-value">Node.js, Express.js, NestJS, Spring Boot, RESTful APIs, Apache
+                                Kafka</span>
+                        </div>
+                        <div class="ts-item glass-card">
+                            <span class="ts-label">// frontend</span>
+                            <span class="ts-value">React.js, Next.js 14, Tailwind CSS, Bootstrap, HTML5, CSS3,
+                                jQuery</span>
+                        </div>
+                        <div class="ts-item glass-card">
+                            <span class="ts-label">// databases</span>
+                            <span class="ts-value">MongoDB, MySQL, PostgreSQL, Firebase, Redis (Caching)</span>
+                        </div>
+                        <div class="ts-item glass-card">
+                            <span class="ts-label">// devops &amp; tools</span>
+                            <span class="ts-value">Git, GitHub Actions (CI/CD), Docker, Kubernetes, AWS (EC2/S3),
+                                Postman</span>
+                        </div>
+                        <div class="ts-item glass-card">
+                            <span class="ts-label">// security</span>
+                            <span class="ts-value">JWT Authentication, OAuth2, RBAC, Encryption &amp; Decryption,
+                                WebSockets</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Education -->
-            <div class="resume-block" data-animate="fade-up">
-                <div class="resume-block-header">
-                    <div class="resume-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Education</h3>
+            <!-- GitHub Graph -->
+            <div class="github-graph-wrapper" data-animate="fade-up">
+                <div class="github-graph-title">
+                    <i class="fab fa-github"></i>&nbsp;&nbsp;git log --graph &mdash; Contribution activity (last 6
+                    months)
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <span class="timeline-date">2018 - 2022</span>
-                            <h4 class="timeline-title">Bachelor of Technology & Engineering</h4>
-                            <span class="timeline-company"><i class="fas fa-university"></i> Sandip University Nashik (Maharashtra)</span>
-                            <p class="timeline-desc">Grade: First class distinction.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <span class="timeline-date">2015 - 2017</span>
-                            <h4 class="timeline-title">Higher Secondary School</h4>
-                            <span class="timeline-company"><i class="fas fa-school"></i> V.M Inter Collage School</span>
-                            <p class="timeline-desc">Grade: First class.</p>
-                        </div>
-                    </div>
-                </div>
+                <div id="github-graph"></div>
             </div>
 
             <div class="resume-download" data-animate="fade-up">
-                <a href="#" class="btn btn-primary btn-lg">
-                    <i class="fas fa-download"></i> Download CV
+                <a href="#" class="btn btn-primary btn-lg" id="downloadCvBtn">
+                    <i class="fas fa-download"></i>&nbsp;./download_cv.sh
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ==================== PROJECTS SECTION ==================== -->
+    <!-- ==================== PROJECTS ==================== -->
     <section id="projects" class="projects-section section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">&lt;projects&gt;</span>
+                <span class="section-tag">// projects.map()</span>
                 <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-                <p class="section-subtitle">Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+                <p class="section-subtitle">Real-world production projects built with Node.js, React, Microservices,
+                    Docker &amp; real-time tech.</p>
+            </div>
+
+            <div class="project-filters" data-animate="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="realtime">Real-time</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
             </div>
 
             <div class="projects-grid">
-                <div class="project-card" data-animate="fade-up">
+
+                <!-- Project 1: B2B Inventory Predictor -->
+                <div class="project-card" data-animate="fade-up" data-category="fullstack">
                     <div class="project-image">
-                        <img src="images/proj_1.jpg" alt="Digital Music Store Data Analysis" loading="lazy">
+                        <img src="images/proj_4.jpg" alt="Scalable B2B Inventory Predictor" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="project-link" target="_blank">
+                            <a href="https://github.com/md-abdullahali" class="project-link" target="_blank"
+                                rel="noopener" aria-label="View on GitHub">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
-                        <div class="project-tech-badge">SQL</div>
+                        <div class="project-tech-badge">Full Stack</div>
+                        <div class="project-number">//01</div>
                     </div>
                     <div class="project-info">
-                        <h3><a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" target="_blank">Digital Music Store Data Analysis using SQL</a></h3>
-                        <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p>
+                        <h3><a href="https://github.com/md-abdullahali" target="_blank" rel="noopener">Scalable B2B
+                                Inventory Predictor</a></h3>
+                        <p>Full-stack inventory management system handling 1,000+ SKUs with real-time stock tracking,
+                            automated alerting via Node-cron &amp; dynamic Chart.js dashboards.</p>
+                        <div class="project-tags">
+                            <span>Node.js</span><span>Express</span><span>MySQL</span><span>React</span><span>Redis</span><span>Chart.js</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-animate="fade-up">
+                <!-- Project 2: Multi-Tenant SaaS -->
+                <div class="project-card" data-animate="fade-up" data-category="realtime">
                     <div class="project-image">
-                        <img src="images/proj_2.jpg" alt="Data Analysis using Python" loading="lazy">
+                        <img src="images/proj_5.jpg" alt="Collaborative Multi-Tenant SaaS Platform" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="project-link" target="_blank">
+                            <a href="https://github.com/md-abdullahali" class="project-link" target="_blank"
+                                rel="noopener" aria-label="View on GitHub">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
-                        <div class="project-tech-badge">Python</div>
+                        <div class="project-tech-badge">SaaS / Real-time</div>
+                        <div class="project-number">//02</div>
                     </div>
                     <div class="project-info">
-                        <h3><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" target="_blank">Data Analysis using Python Project for Beginners</a></h3>
-                        <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+                        <h3><a href="https://github.com/md-abdullahali" target="_blank" rel="noopener">Collaborative
+                                Multi-Tenant SaaS</a></h3>
+                        <p>Trello/Slack-like workspace platform with Socket.io real-time chat, multi-tenant MongoDB
+                            schema, Next AUTH/JWT, and Tailwind CSS responsive UI.</p>
+                        <div class="project-tags">
+                            <span>Next.js
+                                14</span><span>Node.js</span><span>Socket.io</span><span>MongoDB</span><span>JWT</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-animate="fade-up">
+                <!-- Project 3: Sentinel-App -->
+                <div class="project-card" data-animate="fade-up" data-category="backend">
                     <div class="project-image">
-                        <img src="images/proj_3.jpg" alt="Power BI Sales dashboard" loading="lazy">
+                        <img src="images/proj_1.jpg" alt="Sentinel-App Error & Log Tracking" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="project-link" target="_blank">
+                            <a href="https://github.com/md-abdullahali" class="project-link" target="_blank"
+                                rel="noopener" aria-label="View on GitHub">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
-                        <div class="project-tech-badge">Power BI</div>
+                        <div class="project-tech-badge">Backend</div>
+                        <div class="project-number">//03</div>
                     </div>
                     <div class="project-info">
-                        <h3><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" target="_blank">Power BI Sales dashboard Project for Beginners</a></h3>
-                        <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+                        <h3><a href="https://github.com/md-abdullahali" target="_blank" rel="noopener">Sentinel-App —
+                                Error &amp; Log Tracker</a></h3>
+                        <p>Centralized logging system with custom anomaly detection algorithm. Rate-limiting middleware,
+                            Firebase real-time DB &amp; RBAC — reduced production MTTR by <strong
+                                style="color:var(--green)">40%</strong>.</p>
+                        <div class="project-tags">
+                            <span>Node.js</span><span>Express</span><span>Firebase</span><span>React</span><span>RBAC</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-animate="fade-up">
+                <!-- Project 4: Microservices / Kafka -->
+                <div class="project-card" data-animate="fade-up" data-category="devops">
                     <div class="project-image">
-                        <img src="images/proj_4.jpg" alt="Sales Forecast" loading="lazy">
+                        <img src="images/proj_2.jpg" alt="Microservices Order Management System" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="project-link" target="_blank">
+                            <a href="https://github.com/md-abdullahali" class="project-link" target="_blank"
+                                rel="noopener" aria-label="View on GitHub">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
-                        <div class="project-tech-badge">ML</div>
+                        <div class="project-tech-badge">Microservices</div>
+                        <div class="project-number">//04</div>
                     </div>
                     <div class="project-info">
-                        <h3><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" target="_blank">Sales Forecast- Time Series Forecasting</a></h3>
-                        <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+                        <h3><a href="https://github.com/md-abdullahali" target="_blank" rel="noopener">Microservices
+                                Order Management</a></h3>
+                        <p>Event-driven microservices architecture using Apache Kafka for async communication between
+                            payment gateway &amp; shipping module. Containerized with Docker + Kubernetes.</p>
+                        <div class="project-tags">
+                            <span>Spring
+                                Boot</span><span>Kafka</span><span>Docker</span><span>Kubernetes</span><span>Redis</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-animate="fade-up">
+                <!-- Project 5: Dynamic Workflow Builder -->
+                <div class="project-card" data-animate="fade-up" data-category="fullstack">
                     <div class="project-image">
-                        <img src="images/proj_5.jpg" alt="Customer Segmentation" loading="lazy">
+                        <img src="images/proj_3.jpg" alt="Dynamic Workflow Builder" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="project-link" target="_blank">
+                            <a href="https://github.com/md-abdullahali" class="project-link" target="_blank"
+                                rel="noopener" aria-label="View on GitHub">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
-                        <div class="project-tech-badge">ML</div>
+                        <div class="project-tech-badge">Full Stack</div>
+                        <div class="project-number">//05</div>
                     </div>
                     <div class="project-info">
-                        <h3><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" target="_blank">Customer Segmentation using clustering model</a></h3>
-                        <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+                        <h3><a href="https://github.com/md-abdullahali" target="_blank" rel="noopener">Dynamic Workflow
+                                Builder</a></h3>
+                        <p>No-code approval workflow builder in React.js. Non-technical department heads configure
+                            multi-step workflows with JWT Auth, RBAC &amp; AWS SNS notification integration.</p>
+                        <div class="project-tags">
+                            <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>AWS
+                                SNS</span><span>JWT</span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Project 6: Real-time Dashboard -->
+                <div class="project-card" data-animate="fade-up" data-category="realtime">
+                    <div class="project-image">
+                        <img src="images/bg_1.png" alt="Real-time Shipment Dashboard" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/md-abdullahali" class="project-link" target="_blank"
+                                rel="noopener" aria-label="View on GitHub">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-tech-badge">Real-time</div>
+                        <div class="project-number">//06</div>
+                    </div>
+                    <div class="project-info">
+                        <h3><a href="https://github.com/md-abdullahali" target="_blank" rel="noopener">Real-time
+                                Shipment Dashboard</a></h3>
+                        <p>Live shipment tracking dashboard using WebSockets for instant status updates to end-users.
+                            Secured with OAuth2 &amp; JWT with role-based visibility for warehouse staff.</p>
+                        <div class="project-tags">
+                            <span>WebSockets</span><span>Node.js</span><span>OAuth2</span><span>JWT</span><span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- GitHub CTA -->
             <div class="github-cta" data-animate="fade-up">
                 <div class="github-cta-content glass-card">
                     <div class="github-cta-text">
-                        <h3>More projects on <span class="gradient-text">GitHub</span></h3>
-                        <p>I love to solve business problems &amp; uncover hidden data stories</p>
+                        <h3>More on <span class="gradient-text">GitHub</span></h3>
+                        <p>15+ real-world projects — microservices, SaaS platforms, real-time apps &amp; more</p>
                     </div>
-                    <a href="https://github.com/rishabhnmishra" class="btn btn-primary" target="_blank">
-                        <i class="fab fa-github"></i> View GitHub
+                    <a href="https://github.com/md-abdullahali" class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>&nbsp;git clone my-work
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== COUNTER SECTION ==================== -->
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="services-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">// services.list()</span>
+                <h2 class="section-title">What I <span class="gradient-text">Do</span></h2>
+                <p class="section-subtitle">End-to-end tech solutions — from system design to deployment</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-card" data-animate="fade-up">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-server service-icon"></i>
+                        <div class="service-icon-glow"></div>
+                    </div>
+                    <h3 class="service-title">Backend Development</h3>
+                    <p class="service-desc">Scalable REST APIs, microservices &amp; event-driven systems using Node.js,
+                        Express, NestJS &amp; Apache Kafka.</p>
+                    <ul class="service-list">
+                        <li>RESTful API Design &amp; Development</li>
+                        <li>Microservices Architecture</li>
+                        <li>Apache Kafka Event Streaming</li>
+                        <li>Authentication — JWT, OAuth2, RBAC</li>
+                    </ul>
+                    <div class="service-cta">$ node server.js --prod</div>
+                </div>
+                <div class="service-card glass-card" data-animate="fade-up">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-code service-icon"></i>
+                        <div class="service-icon-glow" style="--glow-color:#00f5d4"></div>
+                    </div>
+                    <h3 class="service-title">Full Stack Development</h3>
+                    <p class="service-desc">Complete web applications with React/Next.js frontend &amp;
+                        Node.js/PostgreSQL backend — responsive &amp; production-ready.</p>
+                    <ul class="service-list">
+                        <li>React.js / Next.js 14 UIs</li>
+                        <li>Dynamic Workflow Builders</li>
+                        <li>Real-time Dashboards (WebSockets)</li>
+                        <li>Multi-Tenant SaaS Platforms</li>
+                    </ul>
+                    <div class="service-cta" style="color:var(--cyan)">$ npm run build</div>
+                </div>
+                <div class="service-card glass-card" data-animate="fade-up">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-cloud service-icon"></i>
+                        <div class="service-icon-glow" style="--glow-color:#7c5cfc"></div>
+                    </div>
+                    <h3 class="service-title">DevOps &amp; Cloud</h3>
+                    <p class="service-desc">Containerization, orchestration &amp; CI/CD pipelines for seamless
+                        production deployments on AWS infrastructure.</p>
+                    <ul class="service-list">
+                        <li>Docker &amp; Kubernetes</li>
+                        <li>CI/CD via GitHub Actions</li>
+                        <li>AWS EC2, S3 Deployments</li>
+                        <li>Redis Caching &amp; DB Optimization</li>
+                    </ul>
+                    <div class="service-cta" style="color:var(--purple)">$ docker compose up -d</div>
+                </div>
+                <div class="service-card glass-card" data-animate="fade-up">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-shield-alt service-icon"></i>
+                        <div class="service-icon-glow" style="--glow-color:#f7df1e"></div>
+                    </div>
+                    <h3 class="service-title">Security &amp; Database</h3>
+                    <p class="service-desc">Secure systems with enterprise-grade auth, role-based access control &amp;
+                        optimized database architecture for high-scale applications.</p>
+                    <ul class="service-list">
+                        <li>JWT Auth &amp; OAuth2 Implementation</li>
+                        <li>Role-Based Access Control (RBAC)</li>
+                        <li>MongoDB, MySQL, PostgreSQL Schema</li>
+                        <li>Database Indexing &amp; Query Optimization</li>
+                    </ul>
+                    <div class="service-cta" style="color:var(--yellow)">$ encrypt --algorithm=AES256</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COUNTERS ==================== -->
     <section class="counter-section">
         <div class="container">
             <div class="counter-grid">
                 <div class="counter-item" data-animate="fade-up">
-                    <div class="counter-icon"><i class="fas fa-trophy"></i></div>
-                    <span class="counter-number" data-target="20">0</span>
-                    <span class="counter-label">Achievements</span>
+                    <div class="counter-icon"><i class="fas fa-code-branch"></i></div>
+                    <span class="counter-number" data-target="15">0</span><span class="counter-plus">+</span>
+                    <span class="counter-label">Projects Built</span>
                 </div>
                 <div class="counter-item" data-animate="fade-up">
-                    <div class="counter-icon"><i class="fas fa-project-diagram"></i></div>
-                    <span class="counter-number" data-target="30">0</span>
-                    <span class="counter-label">Projects</span>
+                    <div class="counter-icon"><i class="fas fa-building"></i></div>
+                    <span class="counter-number" data-target="2">0</span><span class="counter-plus"></span>
+                    <span class="counter-label">Companies Worked</span>
                 </div>
                 <div class="counter-item" data-animate="fade-up">
-                    <div class="counter-icon"><i class="fas fa-user-graduate"></i></div>
-                    <span class="counter-number" data-target="1000">0</span>
-                    <span class="counter-label">Mentored Students</span>
+                    <div class="counter-icon"><i class="fas fa-rocket"></i></div>
+                    <span class="counter-number" data-target="40">0</span><span class="counter-plus">%</span>
+                    <span class="counter-label">Avg. Perf. Gain</span>
                 </div>
                 <div class="counter-item" data-animate="fade-up">
-                    <div class="counter-icon"><i class="fas fa-mug-hot"></i></div>
-                    <span class="counter-number" data-target="500">0</span>
-                    <span class="counter-label">Cups of coffee</span>
+                    <div class="counter-icon"><i class="fas fa-check-circle"></i></div>
+                    <span class="counter-number" data-target="100">0</span><span class="counter-plus">%</span>
+                    <span class="counter-label">CI/CD Automation</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== CONTACT SECTION ==================== -->
+    <!-- ==================== CONTACT ==================== -->
     <section id="contact" class="contact-section section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">&lt;contact&gt;</span>
+                <span class="section-tag">// contact.init()</span>
                 <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
-                <p class="section-subtitle">Below are the details to reach out to me!</p>
+                <p class="section-subtitle">Have a project idea or opportunity? Let's build something great together.
+                </p>
             </div>
-
-            <div class="contact-grid">
-                <div class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-card-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+            <div class="contact-main" data-animate="fade-up">
+                <div class="contact-grid">
+                    <div class="contact-card glass-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h3>phone</h3>
+                        <p><a href="tel:+966573894307">+966 573894307</a></p>
                     </div>
-                    <h3>Address</h3>
-                    <p>New Delhi, India</p>
+                    <div class="contact-card glass-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>email</h3>
+                        <p><a href="mailto:mdabdullah031999@gmail.com">mdabdullah031999@gmail.com</a></p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-card-icon"><i class="fab fa-linkedin"></i></div>
+                        <h3>linkedin</h3>
+                        <p><a href="https://www.linkedin.com/in/mdabdullahali/" target="_blank"
+                                rel="noopener">mdabdullahali</a></p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+                        <h3>github</h3>
+                        <p><a href="https://github.com/md-abdullahali" target="_blank" rel="noopener">md-abdullahali</a>
+                        </p>
+                    </div>
                 </div>
-
-                <div class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-card-icon">
-                        <i class="fas fa-phone-alt"></i>
+                <div class="contact-question">
+                    <div class="glass-card question-card">
+                        <div class="question-content">
+                            <h3>Let's <span class="gradient-text">Connect</span></h3>
+                            <p>Open to full-time roles, freelance projects &amp; collaborations. Response within 24
+                                hours.</p>
+                            <a href="mailto:mdabdullah031999@gmail.com" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i>&nbsp;Send Message
+                            </a>
+                        </div>
+                        <div class="question-terminal">
+                            <div class="qt-line"><span class="qt-prompt">$</span> <span
+                                    class="qt-cmd">awaiting_connection...</span></div>
+                            <div class="qt-line"><span class="qt-green">✓</span> <span class="qt-text">Response time:
+                                    &lt; 24h</span></div>
+                            <div class="qt-line"><span class="qt-green">✓</span> <span class="qt-text">Available for
+                                    freelance work</span></div>
+                            <div class="qt-line"><span class="qt-cyan">→</span> <span class="qt-text">Open to full-time
+                                    opportunities</span></div>
+                            <div class="qt-line"><span class="qt-cyan">→</span> <span class="qt-text">Collaboration
+                                    welcome!</span></div>
+                        </div>
                     </div>
-                    <h3>Contact Number</h3>
-                    <p><a href="tel:+918873351807">+ 91 8873351807</a></p>
-                </div>
-
-                <div class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-card-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Address</h3>
-                    <p><a href="mailto:mdabdullah031999@gmail.com">mdabdullah031999@gmail.com</a></p>
-                </div>
-
-                <div class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-card-icon">
-                        <i class="fas fa-file-download"></i>
-                    </div>
-                    <h3>Download Resume</h3>
-                    <p><a href="#">resumelink</a></p>
                 </div>
             </div>
-
-            <div class="contact-question" data-animate="fade-up">
-                <div class="glass-card question-card">
-                    <h3>Have a <span class="gradient-text">Question?</span></h3>
-                    <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary" target="_blank">
-                        <i class="fas fa-paper-plane"></i> Click Here
-                    </a>
-                </div>
-            </div>
-
             <div class="social-links" data-animate="fade-up">
-                <span class="social-label">Find me on</span>
+                <span class="social-label">// connect_with_me</span>
                 <div class="social-icons">
-                    <a href="https://www.youtube.com/@RishahraOfficial" class="social-icon" target="_blank" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mdabdullahali/" class="social-icon" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://twitter.com/risnmishra" class="social-icon" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://twitter.com/rihnmishra" class="social-icon" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/rajgamer_/" class="social-icon" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/mdabdullahali/" class="social-icon" target="_blank"
+                        rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/md-abdullahali" class="social-icon" target="_blank" rel="noopener"
+                        aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:mdabdullah031999@gmail.com" class="social-icon" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="tel:+966573894307" class="social-icon" aria-label="Phone"><i class="fas fa-phone"></i></a>
                 </div>
             </div>
         </div>
@@ -554,20 +797,25 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="#home" class="footer-logo">
-                    <span class="logo-bracket">&lt;</span>MA<span class="logo-bracket">/&gt;</span>
-                </a>
-                <p class="footer-text">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                <a href="#home" class="footer-logo">[MA]</a>
+                <p class="footer-text">
+                    &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    Md Abdullah Ali &mdash; Built with <i class="fas fa-heart" style="color:#ff3e3e;"></i> + <i
+                        class="fas fa-code" style="color:#00ff41;"></i>
+                </p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <a href="#home" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript -->
-    <script src="js/premium-portfolio.js"></script>
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
+    <script src="js/3d-portfolio.js"></script>
 </body>
+
 </html>
